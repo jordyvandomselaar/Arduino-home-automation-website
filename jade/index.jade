@@ -1,0 +1,60 @@
+extends ./no-render/layouts/main.jade
+block content
+	+spinner()
+	.card
+		.card-title Aquarium
+		.card-content
+			+toggle("Licht", "device-1")
+			+toggle("Zuurstof", "device-2")
+			+toggle("Filter", "device-3")
+
+	.card
+		.card-title Gordijnen
+		.card-content
+			.ods-buttons.layout.horizontal.center-justified.center-aligned.pad-bot-20.margin-left--20
+				+button("Open", "device-4", "1")
+				+button("Dicht", "device-4", "-1")
+				+button("Stop", "device-4", "0")
+			+toggle("Spots", "device-5")
+			+toggle("Strips", "device-6")
+
+	.card
+		.card-title Sfeer
+		.card-content
+			
+			.ods-buttons.layout.horizontal.center-justified.center-aligned.pad-bot-20.margin-left--20
+				div Eet tafel
+				+button("Feller", "device-7", "1")
+				+button("Dimmen", "device-7", "-1")
+			+toggle("Bar", "device-8")
+			+toggle("Hoofd licht", "device-9")
+			+toggle("Tv wand", "device-10")
+			+toggle("Achter wand", "device-11")
+
+	.card
+		.card-title Tuin
+		.card-content
+			+toggle("Licht", "device-12")
+
+	.card
+		.card-title Zolder
+		.card-content
+			+toggle("Verlichting voorzijde", "device-13")
+			+toggle("Verlichting achterzijde", "device-14")
+
+	.card
+		.card-title Rolluiken
+		.card-content
+			div Voorkant
+			.ods-buttons.layout.horizontal.center-justified.center-aligned.pad-bot-20.margin-left--20
+				+button("Open", "device-15", "1")
+				+button("Dicht", "device-15", "-1")
+				+button("Stop", "device-15", "0")
+
+			div Achterkant
+			.ods-buttons.layout.horizontal.center-justified.center-aligned.pad-bot-20.margin-left--20
+				+button("Open", "device-16", "1")
+				+button("Dicht", "device-16", "-1")
+				+button("Stop", "device-16", "0")
+
+

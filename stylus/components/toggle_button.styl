@@ -1,0 +1,49 @@
+.toggle
+    width 36px
+    height 14px
+    margin-bottom 12px
+    
+    .toggle-container
+        display inline-block
+        width 100%
+        height 100%
+        position relative
+
+        .toggle-bar
+            height 100%
+            width 100%
+            border-radius 8px
+            background-color #000
+            opacity .4
+            position relative
+            z-index 1
+            transition background-color .3s
+            
+        .toggle-head
+            width 20px
+            height 20px
+            border-radius 50%
+            box-shadow 0 1px 5px 0 rgba(0, 0, 0, 0.6)
+            margin-top -17px
+            background-color #fafafa
+            position relative
+            z-index 2
+            transition margin-left .1s
+            
+        .toggle-text
+            margin-top -20px
+            padding-left 120%
+            z-index 2
+            width 200px
+            
+    &[active="1"]
+        .toggle-head
+            background-color $primary-color
+            margin-left 20px
+        
+        .toggle-bar
+            background-color darken($primary-color, 30)
+    
+            
+
+

@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title Arduino KAKU
+		include ../components/toggle/toggle
+		include ../components/button/button
+		include ../components/spinner/spinner
+		link(rel="stylesheet", href="bootstrap.css" inline)
+		
+	body
+		#nav.layout.background-primary-color.center-justified.shadow-1.center-aligned
+			h1.color-white Arduino KAKU
+		#content.layout.horizontal.wrap
+			block content
+
+		script(src="scripts.js", inline)

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arduino KAKU</title>
+    <link rel="stylesheet" href="bootstrap.css" inline>
+  </head>
+  <body>
+    <div id="nav" class="layout background-primary-color center-justified shadow-1 center-aligned">
+      <h1 class="color-white">Arduino KAKU</h1>
+    </div>
+    <div id="content" class="layout horizontal wrap">
+          <div id="spinner-container"><span>LOADING...</span></div>
+      <div class="card">
+        <div class="card-title">Aquarium</div>
+        <div class="card-content">
+              <div id="device-1" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Licht</div>
+                </div>
+              </div>
+              <div id="device-2" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Zuurstof</div>
+                </div>
+              </div>
+              <div id="device-3" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Filter</div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Gordijnen</div>
+        <div class="card-content">
+          <div class="ods-buttons layout horizontal center-justified center-aligned pad-bot-20 margin-left--20">
+                <div id="device-4" trigger="1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Open</div>
+                  </div>
+                </div>
+                <div id="device-4" trigger="-1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Dicht</div>
+                  </div>
+                </div>
+                <div id="device-4" trigger="0" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Stop</div>
+                  </div>
+                </div>
+          </div>
+              <div id="device-5" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Spots</div>
+                </div>
+              </div>
+              <div id="device-6" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Strips</div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sfeer</div>
+        <div class="card-content">
+          <div class="ods-buttons layout horizontal center-justified center-aligned pad-bot-20 margin-left--20">
+            <div>Eet tafel</div>
+                <div id="device-7" trigger="1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Feller</div>
+                  </div>
+                </div>
+                <div id="device-7" trigger="-1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Dimmen</div>
+                  </div>
+                </div>
+          </div>
+              <div id="device-8" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Bar</div>
+                </div>
+              </div>
+              <div id="device-9" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Hoofd licht</div>
+                </div>
+              </div>
+              <div id="device-10" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Tv wand</div>
+                </div>
+              </div>
+              <div id="device-11" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Achter wand</div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Tuin</div>
+        <div class="card-content">
+              <div id="device-12" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Licht</div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Zolder</div>
+        <div class="card-content">
+              <div id="device-13" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Verlichting voorzijde</div>
+                </div>
+              </div>
+              <div id="device-14" active="0" class="toggle">
+                <div class="toggle-container">
+                  <div class="toggle-bar"></div>
+                  <div class="toggle-head"></div>
+                  <div class="toggle-text">Verlichting achterzijde</div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Rolluiken</div>
+        <div class="card-content">
+          <div>Voorkant</div>
+          <div class="ods-buttons layout horizontal center-justified center-aligned pad-bot-20 margin-left--20">
+                <div id="device-15" trigger="1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Open</div>
+                  </div>
+                </div>
+                <div id="device-15" trigger="-1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Dicht</div>
+                  </div>
+                </div>
+                <div id="device-15" trigger="0" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Stop</div>
+                  </div>
+                </div>
+          </div>
+          <div>Achterkant</div>
+          <div class="ods-buttons layout horizontal center-justified center-aligned pad-bot-20 margin-left--20">
+                <div id="device-16" trigger="1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Open</div>
+                  </div>
+                </div>
+                <div id="device-16" trigger="-1" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Dicht</div>
+                  </div>
+                </div>
+                <div id="device-16" trigger="0" class="button">
+                  <div class="button-container">
+                    <div class="button-text">Stop</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js" inline></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+$card-height = 280px
+$card-title-height = 61px
+
+.card
+	--shadow-1()
+	height $card-height
+	background-color #FFF
+	margin 8px
+	min-width 310px
+	width 100%
+		
+	@media only screen and (min-width $second-stack-point + 1)	
+		width 48%
+		
+	@media only screen and (min-width $first-stack-point + 1)
+		width 32%
+	
+		
+
+	
+
+	.card-title
+		background-color darken($primary-color, 5)
+		text-align center
+		font-size 1.5em
+		font-weight bold
+		height $card-title-height
+		line-height 2.5
+		color #FFF
+		border-bottom-style solid
+		border-bottom-color darken(@background-color, 20)
+		border-bottom-width 2.5px
+		
+	.card-content
+		--layout()
+		--vertical()
+		padding-top 30px
+		padding-left @padding-top
+		padding-bottom 10px
+		height $card-height - $card-title-height
+		
+	
+
+
+
