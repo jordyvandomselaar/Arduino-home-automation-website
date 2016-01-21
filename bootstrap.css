@@ -176,3 +176,11 @@ body {
 #spinner-container.hidden {
   opacity: 0;
 }
+.temperature {
+  text-align: right;
+  padding-top: 20%;
+  padding-right: 10px;
+}
+.temperature .temperature-span {
+  color: #2196f3;
+}
