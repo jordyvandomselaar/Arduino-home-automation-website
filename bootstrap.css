@@ -177,10 +177,13 @@ body {
   opacity: 0;
 }
 .temperature {
+  height: 101px;
   text-align: right;
-  padding-top: 20%;
+}
+.temperature p {
+  margin-top: 85px;
   padding-right: 10px;
 }
-.temperature .temperature-span {
+.temperature p span {
   color: #2196f3;
 }
