@@ -6,3 +6,5 @@
 3. Run `npm install -g gulp`
 4. Navigate to your project folder
 5. Run `npm install`
+
+**Don't forget to run `gulp` inside your project folder before editing anything!**
