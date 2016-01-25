@@ -36,6 +36,7 @@ gulp.task 'coffee', ->
 	.pipe plugins.plumber.stop()
 	.pipe gulp.dest './js'
 
+
 gulp.task 'concat_js',  ->
 	gulp.src 'js/**/*.js'
 	.pipe plugins.order [
