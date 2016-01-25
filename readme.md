@@ -7,4 +7,7 @@
 4. Navigate to your project folder
 5. Run `npm install`
 
-**Don't forget to run `gulp` inside your project folder before editing anything!**
+##How to make changes
+1. Run Gulp inside of your project folder
+2. Change whatever you'd like to change
+3. If it was a `.styl` file don't forget to `@import` it into _bootstrap.styl_
