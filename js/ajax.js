@@ -12,7 +12,9 @@ ajax_get = function(url, callback) {
     if (xhr.readyState === DONE) {
       if (xhr.status === OK) {
         response = this.responseText;
-        return callback(response);
+        if (callback !== "" && callback !== null && typeof callback === 'function') {
+          callback(this.responseText);
+        }
       }
       return "Error! " + xhr.responseText;
     }

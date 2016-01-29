@@ -1,17 +1,22 @@
 temperature = document.getElementById "temperature"
 
-temp = parseInt temperature.innerHTML
-
-temperatureLoop = setInterval ->
+setTemp = ->
 	ajax_get "?getTemperature", (response) ->
-		# console.log response
-		# Set the temp inside the span#temperature
-		# tempColor(response)
-, 2000
+		tempColor response
+		temperature.innerHTML = response
+		setTimeout setTemp, 1000
+
+
 
 
 tempColor = (temp) ->
-	if temp >= 50
-		temperature.style.color = "#F00"
+	if temp > 22 and temp < 26
+		temperature.style.color = "#0F0" # Fishes swim
+	if temp > 30
+		temperature.style.color = "#F00" # Fishes Fry
 	else
-		temperature.style.console = "#2196f3"
+		temperature.style.console = "#2196f3" # Fish stick
+
+
+
+setTemp()

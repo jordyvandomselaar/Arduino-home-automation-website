@@ -10,7 +10,8 @@ ajax_get = (url, callback) ->
 
 		if xhr.readyState is DONE
 			if xhr.status is OK
-				response =  this.responseText
-				return callback response
+				response = this.responseText
+				if callback isnt "" and callback isnt null and typeof callback is 'function'
+					callback(this.responseText)
 
 			return "Error! #{xhr.responseText}"
