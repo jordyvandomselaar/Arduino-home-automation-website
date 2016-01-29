@@ -13,18 +13,19 @@ document.onreadystatechange = function() {
 
 var ajax_get;
 
-ajax_get = function(url) {
+ajax_get = function(url, callback) {
   var xhr;
   xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.send(null);
   return xhr.onreadystatechange = function() {
-    var DONE, OK;
+    var DONE, OK, response;
     DONE = 4;
     OK = 200;
     if (xhr.readyState === DONE) {
       if (xhr.status === OK) {
-        return "Everything went fine";
+        response = this.responseText;
+        return callback(response);
       }
       return "Error! " + xhr.responseText;
     }
@@ -100,3 +101,21 @@ for (j = 0, len1 = toggles.length; j < len1; j++) {
   toggle = toggles[j];
   toggle.addEventListener('click', handle_click);
 }
+
+var temp, tempColor, temperature, temperatureLoop;
+
+temperature = document.getElementById("temperature");
+
+temp = parseInt(temperature.innerHTML);
+
+temperatureLoop = setInterval(function() {
+  return ajax_get("?getTemperature", function(response) {});
+}, 2000);
+
+tempColor = function(temp) {
+  if (temp >= 50) {
+    return temperature.style.color = "#F00";
+  } else {
+    return temperature.style.console = "#2196f3";
+  }
+};

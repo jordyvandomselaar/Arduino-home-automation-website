@@ -1,4 +1,4 @@
-ajax_get = (url) ->
+ajax_get = (url, callback) ->
 	xhr = new XMLHttpRequest()
 	xhr.open 'GET', url
 	xhr.send null
@@ -10,5 +10,7 @@ ajax_get = (url) ->
 
 		if xhr.readyState is DONE
 			if xhr.status is OK
-				return "Everything went fine"
+				response =  this.responseText
+				return callback response
+
 			return "Error! #{xhr.responseText}"
